@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../assets/logo.jpg">
+	<title>寶品極智</title>
+	<link rel='stylesheet' href='../../css/bootstrap.min.css'>
+	<script src="../../js/bootstrap.bundle.min.js"></script>
+	<style type="text/css">
+	html,
+	body {
+		height: 100%;
+		background-color: #f6f6ee
+	}
+
+	.floor-btn {
+		width: 75px;
+	}
+
+
+	.dot {
+		height: 25px;
+		width: 25px;
+		background-color: #f88;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	#of1-a {
+		position: absolute;
+		left: 470px;
+		bottom: 550px;
+	}
+
+	#of1-b {
+		position: absolute;
+		left: 300px;
+		bottom: 550px;
+	}
+
+	#of2-a {
+		position: absolute;
+		left: 610px;
+		bottom: 460px;
+	}
+
+	#of2-b {
+		position: absolute;
+		left: 510px;
+		bottom: 300px;
+	}
+
+	#of2-c {
+		position: absolute;
+		left: 370px;
+		bottom: 300px;
+	}
+
+	#of2-d {
+		position: absolute;
+		left: 270px;
+		bottom: 470px;
+	}
+
+	#of3-a {
+		position: absolute;
+		left: 670px;
+		bottom: 520px;
+	}
+
+	#of3-b {
+		position: absolute;
+		left: 560px;
+		bottom: 300px;
+	}
+
+	#of3-c {
+		position: absolute;
+		left: 390px;
+		bottom: 300px;
+	}
+
+	#of6-b {
+		position: absolute;
+		left: 550px;
+		bottom: 370px;
+	}
+
+	.middle-slide {
+		left: 50%;
+		top: 50%;
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		position: fixed;
+		width: 1280px;
+	}
+
+	</style>
+</head>
+
+<body>
+	<div class="w-100 h-100" id="collapseParent">
+		<!-- 樓層平面圖 -->
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floorb2">
+			<img src="../assets/4/floorb2.jpg" class="d-block w-100 w-100" alt="...">
+		</div>
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floorb1">
+			<img src="../assets/4/floorb1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div data-bs-parent="#collapseParent" class="multi-collapse middle-slide show" id="floor1">
+			<a data-bs-toggle="modal" data-bs-target="#f1-a" role="button" id="of1-a">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f1-b" role="button" id="of1-b">
+				<span class="dot"></span>
+			</a>
+			<img src="../assets/4/floor1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floor1-1">
+			<img src="../assets/4/floor1-1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floor2">
+			<img src="../assets/4/floor2.jpg" class="d-block w-100" alt="...">
+			<a data-bs-toggle="modal" data-bs-target="#f2-a" role="button" id="of2-a">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f2-d" role="button" id="of2-d">
+				<span class="dot"></span>
+			</a>
+		</div>
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floor3">
+			<img src="../assets/4/floor3.jpg" class="d-block w-100" alt="...">
+			<a data-bs-toggle="modal" data-bs-target="#f3-a" role="button" id="of3-a">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b">
+				<span class="dot"></span>
+			</a>
+			<a data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c">
+				<span class="dot"></span>
+			</a>
+		</div>
+		<div data-bs-parent="#collapseParent" class="collapse multi-collapse middle-slide" id="floor6">
+			<img src="../assets/4/floor6.jpg" class="d-block w-100" alt="...">
+			<a data-bs-toggle="modal" data-bs-target="#f6-b" role="button" id="of6-b">
+				<span class="dot"></span>
+			</a>
+		</div>
+		<!-- 樓層按鈕 -->
+		<div class="row position-fixed pb-5 mb-5 pe-5" style="height: 50%; right:5%; bottom:3%;">
+			<div class="col pb-5 pe-5 me-5">
+				<img class="pb-4" src="../assets/4/building.png" style="width: 345.297px; height: 392.5px">
+			</div>
+			<div class="col d-flex flex-column pt-2">
+				<div class="position-absolute end-0 pt-3 pe-5 me-5" id="accordion-btn">
+					<div class="py-2 mb-4">
+						<a data-bs-toggle="modal" data-bs-target="#topfloor" role="button">
+							<img class="floor-btn" src="../assets/4/top.png">
+						</a>
+					</div>
+					<div class="pt-4 pb-3">
+						<a data-bs-toggle="collapse" href="#floor6" role="button">
+							<img class="floor-btn" src="../assets/4/f6.png">
+						</a>
+					</div>
+					<div class="pb-4 mb-2">
+						<a data-bs-toggle="collapse" href="#floor3" role="button">
+							<img class="floor-btn" src="../assets/4/f3.png">
+						</a>
+					</div>
+					<div class="pt-2">
+						<a data-bs-toggle="collapse" href="#floor2" role="button">
+							<img class="floor-btn" src="../assets/4/f2.png">
+						</a>
+					</div>
+					<div class="">
+						<a data-bs-toggle="collapse" href="#floor1-1" role="button">
+							<img class="floor-btn" src="../assets/4/f1-1.png">
+						</a>
+					</div>
+					<div class="">
+						<a data-bs-toggle="collapse" href="#floor1" role="button">
+							<img class="floor-btn" src="../assets/4/f1.png">
+						</a>
+					</div>
+					<div class="">
+						<a data-bs-toggle="collapse" href="#floorb1" role="button">
+							<img class="floor-btn" src="../assets/4/b1.png">
+						</a>
+					</div>
+					<div class="">
+						<a data-bs-toggle="collapse" href="#floorb2" role="button">
+							<img class="floor-btn" src="../assets/4/b2.png">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+	<div class="modoal-group">
+		<!-- topFloor -->
+		<div id="topfloor" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<img src="../assets/4/topfloor.png" class="d-block w-100" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- f1 -->
+		<div id="f1-a" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<img src="../assets/4/f1-a.png" class="d-block w-100" alt="..." type>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="f1-b" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<img src="../assets/4/f1-b.png" class="w-100 d-block" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- f2 -->
+		<div id="f2-a" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<div style="position: relative;">
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-a" role="button" id="of2-a1" value="../assets/4/f2-a1.png" style="left: 25%; bottom: 25%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-a" role="button" id="of2-a2" value="../assets/4/f2-a2.png" style="left: 40%; bottom: 32%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-a" role="button" id="of2-a3" value="../assets/4/f2-a3.png" style="left: 40%; bottom: 40%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<img src="../assets/4/f2-a.png" class=" w-100 h-100" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="f2-b" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<div style="position: relative;">
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b1" value="../assets/4/f2-b1.png" style="left: 20%; bottom: 50%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b2" value="../assets/4/f2-b2.png" style="left: 27%; bottom: 48%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b3" value="../assets/4/f2-b3.png" style="left: 38%; bottom: 54%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<img src="../assets/4/f2-b.png" class="w-100 h-100" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="f2-c" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<div style="position: relative;">
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c1" value="../assets/4/f2-c1.png" style="left: 50%; bottom: 50%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c2" value="../assets/4/f2-c2.png" style="left: 38%; bottom: 54%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c3" value="../assets/4/f2-c3.png" style="left: 60%; bottom: 52%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<img src="../assets/4/f2-c.png" class="h-100 w-100" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="f2-d" class="modal" tabindex="-1">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-body d-flex align-content-center flex-wrap">
+						<div class="container-fluid">
+							<img src="../assets/4/f2-d.png" class="d-block w-100" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- f3 -->
+	<div id="f3-a" class="modal" tabindex="-1">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-body d-flex align-content-center flex-wrap">
+					<div class="container-fluid">
+						<div style="position: relative;">
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-a" role="button" id="of3-a1" value="../assets/4/f3-a1.png" style="left: 30%; bottom: 15%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-a" role="button" id="of3-a2" value="../assets/4/f3-a2.png" style="left: 42%; bottom: 64%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-a" role="button" id="of3-a3" value="../assets/4/f3-a3.png" style="left: 42%; bottom: 42%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-a" role="button" id="of3-a4" value="../assets/4/f3-a4.png" style="left: 55%; bottom: 34%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<img src="../assets/4/f3-a.png" class="w-100 h-100" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="f3-b" class="modal" tabindex="-1">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-body d-flex align-content-center flex-wrap">
+					<div class="container-fluid">
+						<div style="position: relative;">
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b1" value="../assets/4/f3-b1.png" style="left: 28%; bottom: 19%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b2" value="../assets/4/f3-b2.png" style="left: 20%; bottom: 42%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b3" value="../assets/4/f3-b3.png" style="left: 32%; bottom: 38%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b4" value="../assets/4/f3-b4.png" style="left: 43%; bottom: 38%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<img src="../assets/4/f3-b.png" class="w-100 h-100" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="f3-c" class="modal" tabindex="-1">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-body d-flex align-content-center flex-wrap">
+					<div class="container-fluid">
+						<div style="position: relative;">
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c1" value="../assets/4/f3-c1.png" style="left: 46%; bottom: 38%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c2" value="../assets/4/f3-c1.png" style="left: 30%; bottom: 47%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c3" value="../assets/4/f3-c2.png" style="left: 35%; bottom:38%; position: absolute;">
+								<span class="dot"></span>
+							</a>
+							<img src="../assets/4/f3-c.png" class="h-100 w-100" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- f6 -->
+	<div id="f6-b" class="modal" tabindex="-1">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="d-flex align-items-center">
+				<div class="modal-body d-flex align-content-center">
+					<div class="container-fluid">
+						<img src="../assets/4/f6-b.png" class="w-100 d-block" alt="...">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="inModal" class="modal" tabindex="-1">
+	</div>
+	<a class="btn position-fixed home" style="right:50px;bottom: 50px; font-size:50px;" href="../../index.html" role="button"><i class="fas fa-home"></i></a>
+	<script src="https://kit.fontawesome.com/f1d6edd364.js"></script>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script>
+		var myCollapseEl = document.getElementById('#collapseParent')
+		console.log(myCollapseEl);
+		// myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
+		// 	console.log($(this));
+		//   // Action to execute once the collapsible area is expanded
+		// })
+		// 
+		var accordionBtn = 'floor1'
+		$("#collapseParent .multi-collapse").on('hide.bs.collapse', function (e) {
+			console.log("cb",accordionBtn);
+			console.log("current close:",$(this)[0].id);
+			if ($(this)[0].id=== accordionBtn) {
+					console.log('no');
+          return e.preventDefault();
+      }
+      console.log(accordionBtn);
+		})
+		$("#collapseParent .multi-collapse").on('show.bs.collapse', function (e) {
+			console.log("current open", $(this)[0].id);
+      accordionBtn=$(this)[0].id;
+		})
+		$(".modal").on('click', function() {
+			//console.log($(this)[0])
+			$($(this)[0]).modal("hide");
+		})
+		$(".inModalClick").on('click', function(event) {
+			//停止event向上傳播，避免關閉modal
+			event.stopPropagation();
+			console.log($(this)[0].dataset.bsTarget)
+			let url = $(this)[0].attributes.value.value
+			let target = $(this)[0].dataset.bsTarget
+			$(target).modal("show");
+			$(target + ' img').attr('src', url)
+			//$(target).modal("show");
+		})
+	</script>
+</body>
+
+</html>

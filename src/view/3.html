@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../assets/logo.jpg">
+	<title>寶品極智</title>
+	<link rel='stylesheet' href='../../css/bootstrap.min.css'>
+		<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script src="../../js/bootstrap.bundle.min.js"></script>
+	<style type="text/css">
+	html,
+	body {
+		height: 100%;
+	}
+
+	.middle-slide {
+		left: 50%;
+		top: 50%;
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		position: fixed;
+		width: 1280px;
+	}
+
+	.btn6 {
+		width: 60%
+	}
+
+	.btnM {
+		width: 70%
+	}
+
+	.modal {
+		background-color: #71c4cc;
+	}
+	.s-jpg{
+		cursor: pointer;
+	}
+	.hexagon{
+		width: 14%; 
+		height: 28%;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="w-100 h-100">
+		<div id="hexagonMap" class="w-100 h-100">
+			<div class="d-flex align-items-center h-100">
+				<div class="container-fluid">
+					<div class="position-relative w-100">
+						<!-- live -->
+						<a data-src="live" class="position-absolute hexagon hexagon-live s-jpg" data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:56%;top: 36%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- happy -->
+						<a data-src="happy" class="position-absolute hexagon hexagon-happy s-jpg " data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:49%;top: 57%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- eat -->
+						<a data-src="eat" class="position-absolute s-jpg s-jpg hexagon hexagon-eat" data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:49%;top: 15%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- cloth -->
+						<a data-src="cloth" class="position-absolute s-jpg hexagon hexagon-cloth" data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:24%;top: 13%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- transportation -->
+						<a data-src="transportation" class="position-absolute s-jpg hexagon hexagon-transportation" data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:18%;top: 36%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- education -->
+						<a data-src="education" class="position-absolute s-jpg hexagon hexagon-education" data-bs-toggle="modal" data-bs-target="#modal-hexagon" style="right:24%;top: 57%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<!-- middle -->
+						<a class="position-absolute s-jpg hexagon hexagon-middle" id="mapBtn" style="right:37%;top: 36%;" role="button" data-bs-toggle="tooltip" title="查看！">
+						</a>
+						<img src="../assets/3/city1.png" class="w-100" alt="...">	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="aroundMap" class="w-100 h-100" style="display: none;">
+			<div class="d-flex align-items-center h-100">
+				<div class="container-fluid">
+					<div class="position-relative w-100 align-self-center">
+							<a data-src="map1" class="btn position-absolute s-jpg" style="right:24%;top: 25%; width: 9%; height: 12%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map2" class="btn position-absolute s-jpg" style="right:18%;top: 34%; width: 4%; height: 18%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map3" class="btn position-absolute s-jpg" style="right:24%;top: 35%; width: 4%; height: 21%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map4" class="btn position-absolute s-jpg" style="left:80%;top: 50%; width: 4%; height: 23%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map6" class="btn position-absolute s-jpg" style="left:69%;top: 89%; width: 11%; height: 7%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map7" class="btn position-absolute s-jpg" style="left:52%;top: 87%; width: 10%; height: 5%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map8" class="btn position-absolute s-jpg" style="left:51%;top: 14%; width: 10%; height: 8%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map9" class="btn position-absolute s-jpg" style="left:42%;top: 18%; width: 8%; height: 7%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map10" class="btn position-absolute s-jpg" style="left:52%;top: 72%; width: 10%; height: 6%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map11" class="btn position-absolute s-jpg" style="left:20%;top: 26%; width: 9%; height: 4%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map12" class="btn position-absolute s-jpg" style="left:42%;top: 78%; width: 5%; height: 8%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map13" class="btn position-absolute s-jpg" style="left:52%;top: 80%; width: 10%; height: 5%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map14" class="btn position-absolute s-jpg" style="left:41%;top: 59%; width: 4%; height: 7%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<a data-src="map15" class="btn position-absolute s-jpg" style="left:36%;top: 79%; width: 6%; height: 6%;" role="button" data-bs-toggle="tooltip" title="查看！"></a>
+							<img src="../assets/3/middle.PNG" class="w-100 d-block">
+						
+							<div id="Smap" class="h-100 w-100" style="background-color: rgba(0,0,0,0.6);">
+								<img src="../assets/3/map1.jpg" class="position-absolute top-50 start-50 translate-middle" alt="...">
+							</div>
+					</div>
+			</div>		
+		</div>
+	</div>
+	</div>
+	<!-- modal-hexagon -->
+	<div class="modal" id="modal-hexagon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="d-flex align-items-center">
+					<div class="container-fluid">
+						<div class="w-100 position-relative">
+							<img src="../assets/3/happy.PNG" class="w-100 d-block">
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<a class="btn position-fixed home" style="right:50px;bottom: 50px; font-size:50px;" href="../../index.html" role="button"><i class="fas fa-home"></i></a>
+	<script src="https://kit.fontawesome.com/f1d6edd364.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(".hexagon").on("click",function(){
+			let url = "../assets/3/" + $(this).data('src') + '.PNG';
+			console.log(url);
+			$('#modal-hexagon img').attr('src',url)
+		})
+		$('#Smap').hide();
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+		$('.s-jpg').click(function() {
+			let url = "../assets/3/" + $(this).data('src') + '.jpg';
+			$('#Smap img').attr("src", url);
+			$('#Smap').show();
+		});
+		$('[data-bs-toggle="tooltip"]').tooltip(); 
+		$('#Smap').click(function() {
+			$('#Smap').hide();
+		});
+		$(".modal").on('click', function() {
+			$(".modal").modal("hide");
+		})
+
+		$("#mapBtn").on("click",function(){
+			$("#hexagonMap").hide();
+			$("#aroundMap").show();
+		})
+	})
+	</script>
+</body>
+
+</html>
