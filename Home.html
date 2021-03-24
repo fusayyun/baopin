@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="./src/assets/logo.jpg">
+	<title>寶品極智</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='./css/bootstrap.min.css'>
+	<style type="text/css">
+	html,
+	body {
+		height: 100%;
+	}
+	</style>
+</head>
+
+<body>
+	<video id="video3" class="fixed-top w-100 h-100" controls style="background-color: black;" loop="true" autoplay="autoplay" muted="true">
+		<source src="src/assets/home/intro.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<video id="videoStart" class="fixed-top w-100 h-100" controls style="background-color: black;">
+		<source src="src/assets/home/intro.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<!-- <script src="public/js/popper.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script> -->
+	<script>
+	let count = 0;
+	$('#videoStart').hide();
+	$(document).keydown(function(e) {
+		if (e.which == '39' && count == 1) { //esc鍵
+			document.location.href = "index.html";
+		}
+		if (e.which == '39' && count == 0) {
+			$('#videoStart').show();
+			document.getElementById("videoStart").play();
+			count += 1;
+		}
+	});
+	</script>
+</body>
+
+</html>
