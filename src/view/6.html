@@ -1,81 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<link rel="icon" href="../assets/logo.jpg">
 	<title>寶品極智</title>
 	<link rel='stylesheet' href='../../css/bootstrap.min.css'>
-	<script src="../../js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
 	<style type="text/css">
 	html,
 	body {
 		height: 100%;
+
+	}
+
+	.swiper-pagination-bottom-progressbar {
+		width: 100%;
+		height: 4px;
+		left: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, .25);
+		position: absolute;
+	}
+
+	.swiper-pagination-bottom-progressbar .swiper-pagination-progressbar-fill {
+		background: var(--swiper-pagination-color, var(--swiper-theme-color));
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: scale(0);
+		transform-origin: left top;
 	}
 	</style>
-	
 </head>
 
 <body>
-	<div class="d-flex align-items-center h-100">
-		<div class="container-fluid">
-			<div id="myCarousel" class="carousel carousel-dark slide " data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="../assets/6/equip1.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip2.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip3.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip4.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip5.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip6.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip7.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip8.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip9.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip10.PNG" class="w-100 d-block" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="../assets/6/equip11.PNG" class="w-100 d-block" alt="...">
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next py-5 my-5" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+	<div id="mySwiper" class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="../assets/6/equip1.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip2.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip3.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip4.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip5.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip6.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip7.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip8.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip9.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip10.jpg" class="w-100 d-block" alt="...">
+			</div>
+			<div class="swiper-slide">
+				<img src="../assets/6/equip11.jpg" class="w-100 d-block" alt="...">
 			</div>
 		</div>
+		<div class="bottom-0 swiper-pagination"></div>
+		<div class="swiper-button-prev swiper-button-hidden swiper-navigation"></div>
+		<div class="swiper-button-next swiper-button-hidden swiper-navigation"></div>
 	</div>
-	<a class="btn position-fixed home" style="right:50px;bottom: 50px; font-size:50px;" href="../../index.html" role="button"><i class="fas fa-home"></i></a>
+	<a id="homeButton" class="btn position-fixed home" style="color:green; right:50px;bottom: 50px; font-size:50px; z-index:2 " href="../../index.html" role="button">
+		<i class="fas fa-home"></i>
+	</a>
 	<script src="https://kit.fontawesome.com/f1d6edd364.js"></script>
 	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script src="../../js/swiper-bundle.min.js"></script>
 	<script>
-	let count = 0;
-	$(document).keydown(function(e) {
-		if (e.which == '39') { //右鍵
-			$(".carousel-control-next").focus();
+	const navigationButtons = Array.from(document.getElementsByClassName('swiper-navigation'))
+	const homeButton = document.getElementById("homeButton");
+	const swiper = new Swiper('#mySwiper', {
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+			modifierClass: 'swiper-pagination-bottom-', //取代原本的class
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		mousewheel:true,
+		on:{
+			beforeInit() {
+				//隱藏前arrow
+				navigationButtons[0].style.display = 'none';
+			},
+			slideChange() {
+				navigationButtons.forEach(arrow => { arrow.style.display = 'block'; });
+				homeButton.style.display = 'block';
+				homeButton.style.color = 'green';
+				if (swiper.isEnd) { //最後一頁
+					// 最後一頁首頁按鈕呈現藍色
+					homeButton.style.color = 'blue';
+					// 隱藏後按鈕
+					navigationButtons[1].style.display = 'none';
+				} else if (swiper.isBeginning) { //	轉到第一頁
+					// 隱藏前按鈕
+					navigationButtons[0].style.display = 'none';
+				}
+			},
+		},
+	})
+	window.addEventListener("keydown", function(e) {
+		switch (e.key) {
+			case "Right":
+			case "ArrowRight": // 右方向鍵
+				if (swiper.isEnd) {
+					document.location = "7.html";
+				}
+				swiper.slideNext();
+				break;
+			case "Left":
+			case "ArrowLeft": //左方向鍵
+				swiper.slidePrev()
+				break;
+			case "Esc": // IE/Edge specific value
+			case "Escape":
+				console.log('esc');
+				document.location = "../../index.html";
+				break;
+			default:
+				return; // 離開當沒有任何事件要處理
 		}
-	});
+
+	}, true);
 	</script>
 </body>
 

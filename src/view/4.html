@@ -98,7 +98,6 @@
 		position: fixed;
 		width: 1280px;
 	}
-
 	</style>
 </head>
 
@@ -157,7 +156,7 @@
 			</a>
 		</div>
 		<!-- 樓層按鈕 -->
-		<div class="row position-fixed pb-5 mb-5 pe-5" style="height: 50%; right:5%; bottom:3%;">
+		<div class="row position-fixed pb-5 mb-5 pe-5" style="height: 50%; right:1%; bottom:1%;">
 			<div class="col pb-5 pe-5 me-5">
 				<img class="pb-4" src="../assets/4/building.png" style="width: 345.297px; height: 392.5px">
 			</div>
@@ -206,6 +205,9 @@
 				</div>
 			</div>
 		</div>
+		<div class="row position-fixed pb-3 pe-5" style="right:1%; bottom:1%; z-index: 2000">
+			<span style="color: #2f2379">本圖僅供格局參考，實際以竣工現況為主</span>
+		</div>
 	</div>
 	<!-- modal -->
 	<div class="modoal-group">
@@ -225,7 +227,7 @@
 		<div id="f1-a" class="modal" tabindex="-1">
 			<div class="modal-dialog modal-fullscreen">
 				<div class="modal-content">
-					<div class="modal-body d-flex align-content-center flex-wrap">
+					<div class="modal-body bootd-flex align-content-center flex-wrap">
 						<div class="container-fluid">
 							<img src="../assets/4/f1-a.png" class="d-block w-100" alt="..." type>
 						</div>
@@ -276,6 +278,9 @@
 								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b1" value="../assets/4/f2-b1.png" style="left: 20%; bottom: 50%; position: absolute;">
 									<span class="dot"></span>
 								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b4" value="../assets/4/f2-b4.png" style="left: 24%; bottom: 39%; position: absolute;">
+									<span class="dot"></span>
+								</a>
 								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-b" role="button" id="of2-b2" value="../assets/4/f2-b2.png" style="left: 27%; bottom: 48%; position: absolute;">
 									<span class="dot"></span>
 								</a>
@@ -302,6 +307,9 @@
 									<span class="dot"></span>
 								</a>
 								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c3" value="../assets/4/f2-c3.png" style="left: 60%; bottom: 52%; position: absolute;">
+									<span class="dot"></span>
+								</a>
+								<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f2-c" role="button" id="of2-c4" value="../assets/4/f2-c4.png" style="left: 54%; bottom: 37%; position: absolute;">
 									<span class="dot"></span>
 								</a>
 								<img src="../assets/4/f2-c.png" class="h-100 w-100" alt="...">
@@ -367,6 +375,9 @@
 							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b4" value="../assets/4/f3-b4.png" style="left: 43%; bottom: 38%; position: absolute;">
 								<span class="dot"></span>
 							</a>
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-b" role="button" id="of3-b5" value="../assets/4/f3-b5.png" style="left: 49%; bottom: 45%; position: absolute;">
+								<span class="dot"></span>
+							</a>
 							<img src="../assets/4/f3-b.png" class="w-100 h-100" alt="...">
 						</div>
 					</div>
@@ -383,10 +394,10 @@
 							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c1" value="../assets/4/f3-c1.png" style="left: 46%; bottom: 38%; position: absolute;">
 								<span class="dot"></span>
 							</a>
-							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c2" value="../assets/4/f3-c1.png" style="left: 30%; bottom: 47%; position: absolute;">
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c2" value="../assets/4/f3-c2.png" style="left: 30%; bottom: 47%; position: absolute;">
 								<span class="dot"></span>
 							</a>
-							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c3" value="../assets/4/f3-c2.png" style="left: 35%; bottom:38%; position: absolute;">
+							<a class='inModalClick' data-bs-toggle="modal" data-bs-target="#f3-c" role="button" id="of3-c3" value="../assets/4/f3-c3.png" style="left: 35%; bottom:38%; position: absolute;">
 								<span class="dot"></span>
 							</a>
 							<img src="../assets/4/f3-c.png" class="h-100 w-100" alt="...">
@@ -410,35 +421,54 @@
 	</div>
 	<div id="inModal" class="modal" tabindex="-1">
 	</div>
-	<a class="btn position-fixed home" style="right:50px;bottom: 50px; font-size:50px;" href="../../index.html" role="button"><i class="fas fa-home"></i></a>
+	<a id="homeButton" class="btn position-fixed home" style="color:green; right:50px;bottom: 50px; font-size:50px; z-index:2 " href="../../index.html" role="button">
+		<i class="fas fa-home"></i>
+	</a>
 	<script src="https://kit.fontawesome.com/f1d6edd364.js"></script>
 	<script src="../../js/jquery-3.6.0.min.js"></script>
 	<script>
+		window.addEventListener("keydown", function(e) {
+			if (e.key === "ArrowRight") {
+				document.location = "5.html";
+			}
+		})
 		var myCollapseEl = document.getElementById('#collapseParent')
 		console.log(myCollapseEl);
 		// myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
 		// 	console.log($(this));
 		//   // Action to execute once the collapsible area is expanded
 		// })
-		// 
+		// 目前的開啟的頁面
 		var accordionBtn = 'floor1'
-		$("#collapseParent .multi-collapse").on('hide.bs.collapse', function (e) {
-			console.log("cb",accordionBtn);
-			console.log("current close:",$(this)[0].id);
-			if ($(this)[0].id=== accordionBtn) {
+		// 會先觸發show再觸發hide事件
+		// hide之前觸發事件
+		$("#collapseParent .multi-collapse").on('hide.bs.collapse', function(e) {
+				console.log("cb", accordionBtn);
+				console.log("current close:", $(this)[0].id);
+				// 如果重複點擊不摺疊頁面
+				if ($(this)[0].id === accordionBtn) {
 					console.log('no');
-          return e.preventDefault();
-      }
-      console.log(accordionBtn);
-		})
-		$("#collapseParent .multi-collapse").on('show.bs.collapse', function (e) {
-			console.log("current open", $(this)[0].id);
-      accordionBtn=$(this)[0].id;
-		})
+					return e.preventDefault();
+				}
+				$(this).hide()
+				console.log(accordionBtn);
+			})
+		// show前觸發事件
+		$("#collapseParent .multi-collapse").on('show.bs.collapse', function(e) {
+				$(this).hide()
+				console.log("current open", $(this)[0].id);
+				accordionBtn = $(this)[0].id;
+			})
+		//顯示
+		$("#collapseParent .multi-collapse").on('shown.bs.collapse',
+			function(e){$(this).show();})
+		//點擊modal本身來關閉頁面
 		$(".modal").on('click', function() {
-			//console.log($(this)[0])
+			console.log(`${$(this)[0].id}.png`)
 			$($(this)[0]).modal("hide");
+			$(this).find('img').attr('src',`../assets/4/${$(this)[0].id}.png`)
 		})
+		// 點擊modal裡的按鈕
 		$(".inModalClick").on('click', function(event) {
 			//停止event向上傳播，避免關閉modal
 			event.stopPropagation();
@@ -446,8 +476,14 @@
 			let url = $(this)[0].attributes.value.value
 			let target = $(this)[0].dataset.bsTarget
 			$(target).modal("show");
+			$(target)
 			$(target + ' img').attr('src', url)
 			//$(target).modal("show");
+		})
+		var inModal = document.getElementById('inModal')
+			inModal.addEventListener('hidden.bs.modal', function (event) {
+			  // do something...
+			  
 		})
 	</script>
 </body>
